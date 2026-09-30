@@ -85,5 +85,4 @@ app.post('/api/contact', limiter, async (req, res) => {
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 app.use(express.static(__dirname, { extensions: ['html'], maxAge: '1h' }));
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-
 app.listen(PORT, () => console.log(`MARKETIQO running on http://localhost:${PORT}`));
